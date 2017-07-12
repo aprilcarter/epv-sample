@@ -245,37 +245,5 @@
             }
         });
     }
-    
-    
-    // Part of a failed implementation, but still a good interface for future use
-    // (function() {
-    //     if($(".resend-sn").length > 0) {
-    //         $(".resend-sn").click(function(e) {
-    //             e.preventDefault();
-    //             $(this).attr("disabled", "true");
-    //             var data = {"action": "resendgc", "order_id": $(this).parent().data("orderId")};
-    //             $.ajax({
-    //                 url: pve.ajaxUrl,
-    //                 type: 'post',
-    //                 data: data,
-    //                 success: function(response) {
-    //                     console.log(response);
-    //                     var targetRow = ".order-" + response.data.order_id;
-    //                     if(response.success === true) {
-    //                         $(targetRow).find(".resend-sn").text("Sent").attr("disabled", true);
-    //                         $(targetRow).find(".order-actions").append("<div class='email-sent'>Email Sent</div>");
-    //                         $(".email-sent").fadeIn(500).delay(800).fadeOut(500, function() {
-    //                             $(this).remove()
-    //                         });
-    //                     } else {
-    //                         $(targetRow).find(".resend-sn").attr("disabled", "true");
-    //                         $(".my_account_orders").before(response.data.error);
-    //                     }    
-    //                 }
-    //             });
-    //         });    
-    //     }
-    // })();
-    
   }); //document ready
 })(jQuery);
